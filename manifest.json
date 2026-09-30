@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.taiku666.net-speed",
+  "name": "Net Speed",
+  "version": "0.1.0",
+  "author": "taiku666",
+  "license": "MIT",
+  "description": "Shows the current network download and upload speed in the bar, marked with a down and up arrow.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Net Speed",
+    "description": "Live download ↓ and upload ↑ speed of the active network interface.",
+    "category": "Network",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "interface": "auto",
+      "unit": "bytes",
+      "pollIntervalMs": 1000
+    },
+    "schema": [
+      {
+        "key": "interface",
+        "type": "string",
+        "label": "Interface",
+        "defaultValue": "auto",
+        "description": "auto follows the interface with the default route, all sums every interface except lo, or set one explicitly e.g. wlp4s0."
+      },
+      {
+        "key": "unit",
+        "type": "string",
+        "label": "Unit",
+        "defaultValue": "bytes",
+        "description": "bytes shows KB/s and MB/s, bits shows kbit/s and Mbit/s."
+      },
+      {
+        "key": "pollIntervalMs",
+        "type": "integer",
+        "label": "Refresh interval (ms)",
+        "min": 500,
+        "max": 10000,
+        "step": 500,
+        "defaultValue": 1000
+      }
+    ],
+    "aliases": ["network", "speed", "bandwidth", "traffic", "download", "upload"]
+  },
+  "repository": "https://github.com/taiku666/omarchy-net-speed"
+}

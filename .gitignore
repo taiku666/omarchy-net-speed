@@ -1,0 +1,5 @@
+project.md
+*.bak
+*.swp
+*~
+.claude/
