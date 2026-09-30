@@ -3,9 +3,9 @@
 Live network download and upload speed in the [Omarchy](https://omarchy.org/) bar,
 marked with a down ↓ and up ↑ arrow.
 
-```
-↓ 3.59 MB/s  ↑ 11.5 KB/s
-```
+<p align="center">
+    <img src="preview.png" alt="Net Speed in the bar, and an enlarged view of the widget" width="700">
+</p>
 
 ## Install
 
